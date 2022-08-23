@@ -5,11 +5,11 @@ pipeline {
             steps {
                 git 'https://github.com/sramm24/website.git'
             }
+	}
         stage ('testing') {
             steps {
                 sh 'echo "testing; in develop branch"'
             }
-        }
         }
     }
 }
