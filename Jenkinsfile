@@ -11,9 +11,9 @@ pipeline {
                 sh 'echo "testing; in master branch"'
             }
         }
-        stage ('push to PROD') {
+        stage ('Docker build in PROD') {
             steps {
-                sh 'echo "Production; in master branch"'
+                sh 'sudo docker build /home/ubuntu/workspace/capstone1_master -t sramm24/capsproj'
             }
         }        
     }
