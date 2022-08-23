@@ -1,11 +1,11 @@
 pipeline {
     agent { label 'test-linux' }
     stages {
-        stage ("git pull") {
+        stage ('git pull') {
             steps {
                 git 'https://github.com/sramm24/website.git'
             }
-        stage ("testing") {
+        stage ('testing') {
             steps {
                 sh 'echo "testing; in develop branch"'
             }
